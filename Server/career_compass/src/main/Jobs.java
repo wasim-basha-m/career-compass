@@ -230,36 +230,4 @@ public class Jobs extends EmployerLogin {
 
 	}
 
-	public static void main(String[] args) throws SQLException {
-
-		Jobs j = new Jobs();
-		Scanner sc = new Scanner(System.in);
-		while (true) {
-			System.out.println(
-					"What you wanna perform...? \n 1. ADD JOB \n 2. VIEW JOB \n 3. UPDATE JOB \n 4. DELETE JOB \n 5. SEARCH JOB \n");
-			int performAction = sc.nextInt();
-			switch (performAction) {
-			case 1:
-				j.addJob();
-				break;
-			case 2:
-				j.viewJob();
-				break;
-			case 3:
-				j.updateJob();
-				break;
-			case 4:
-				j.deleteJob();
-				break;
-			case 5:
-				j.searchJob();
-				break;
-			default:
-				System.out.println("Invalid Option");
-			}
-			sc.close();
-		}
-
-	}
-
 }

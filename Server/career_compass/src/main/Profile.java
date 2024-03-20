@@ -126,32 +126,4 @@ public class Profile extends EmployeeLogin {
 		sc.close();
 	}
 
-	public static void main(String[] args) throws SQLException {
-		Profile p = new Profile();
-		Jobs je = new Jobs();
-		Scanner sc = new Scanner(System.in);
-		while (true) {
-			System.out.println(
-					"What you wanna perform...? \n 1. ADD PROFILE \n 2. VIEW PROFILE \n 3. UPDATE PROFILE \n 4. SEARCH JOB \n");
-			int performAction = sc.nextInt();
-			switch (performAction) {
-			case 1:
-				p.addProfile();
-				break;
-			case 2:
-				p.viewProfile();
-				break;
-			case 3:
-				p.updateProfile();
-				break;
-			case 4:
-				je.searchJob();
-				break;
-			default:
-				System.out.println("Invalid Option");
-			}
-			sc.close();
-		}
-		
-	}
 }
